@@ -142,10 +142,7 @@ colnames(playoff_stats) <- playoff_cols
 valid_links <- character(0)
 non_count = 0
 
-new_urls <- distinct_urls[1874:2351]
-print(new_urls[1])
-
-for (link in new_urls) {
+for (link in distinct_urls) {
   Sys.sleep(10)
     page <- read_html(link)
     selected_nodes <- page %>% html_nodes("#playoffs_per_game, #playoffs_advanced")
